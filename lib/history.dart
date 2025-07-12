@@ -64,7 +64,6 @@ class History extends StatelessWidget {
           Expanded(
             child: ListView.builder(
               shrinkWrap: true,
-              // padding: EdgeInsets.all(0),
                 itemCount: 6,
                 itemBuilder: (context, position) {
                   final item = items[position];
@@ -75,14 +74,14 @@ class History extends StatelessWidget {
                         child: ListTile(
                           contentPadding: EdgeInsets.fromLTRB(15, 0, 0, 0),
                           title: Text(
-                            item['match']!,
+                            item['match'],
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
                             ),
                           ),
                           subtitle: Text(
-                            item['bet']!,
+                            item['bet'],
                             style: TextStyle(
                                 color: Colors.white70,
                                 fontWeight: FontWeight.normal),
@@ -102,7 +101,7 @@ class History extends StatelessWidget {
                                   ),
                                 ),
                                 Text(
-                                  item['kickoff']!,
+                                  item['kickoff'],
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 12,
@@ -125,11 +124,15 @@ class History extends StatelessWidget {
                                           : item['status'] == 'Played and Won'
                                               ? const Color.fromARGB(255, 0, 111, 4)
                                               : const Color.fromARGB(255, 141, 10, 1),
+
+                                            // color:   if (item['status' == 'Not yet Started']) {const Color.fromARGB(255, 65, 64, 64)},
+                                            // else {const Color.fromARGB(255, 0, 111, 4)},
+                                            //   if (item['status'] == 'Played and Lost']) {const Color.fromARGB(255, 141, 10, 1)},
                                     ),
                                     height: 20,
                                     child: Center(
                                       child: Text(
-                                        item['status']!,
+                                        item['status'],
                                         style: TextStyle(
                                             color: Colors.white, fontSize: 12),
                                       ),
@@ -165,14 +168,14 @@ class History extends StatelessWidget {
                         child: ListTile(
                           contentPadding: EdgeInsets.fromLTRB(15, 0, 0, 0),
                           title: Text(
-                            item['match']!,
+                            item['match'],
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
                             ),
                           ),
                           subtitle: Text(
-                            item['bet']!,
+                            item['bet'],
                             style: TextStyle(
                                 color: Colors.white70,
                                 fontWeight: FontWeight.normal),
@@ -192,7 +195,7 @@ class History extends StatelessWidget {
                                   ),
                                 ),
                                 Text(
-                                  item['kickoff']!,
+                                  item['kickoff'],
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 12,
@@ -219,7 +222,7 @@ class History extends StatelessWidget {
                                     height: 20,
                                     child: Center(
                                       child: Text(
-                                        item['status']!,
+                                        item['status'],
                                         style: TextStyle(
                                             color: Colors.white, fontSize: 12),
                                       ),
