@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:topzibet/history.dart';
 import 'package:topzibet/top_tabs.dart';
 
 class HomepageMain extends StatefulWidget {
@@ -13,11 +14,21 @@ class _HomepageMainState extends State<HomepageMain> {
   int _selectedIndex = 0;
 
   // List of pages to navigate to
-  final List<Widget> _pages = [
-    TopTabs(),
-    Center(child: Text('Search')),
-    Center(child: Text('Profile')),
-  ];
+  late List<Widget> _pages;
+
+  @override
+  void initState() {
+    super.initState();
+    _pages = [
+      TopTabs(),
+      Center(child: Text('Search')),
+      Center(
+        child: ElevatedButton(onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context) => History()));}, 
+        child: Text('HIStory Page')),
+      ),
+    ];
+  }
 
   void _onItemTapped(int index) {
     setState(() {

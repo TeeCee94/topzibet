@@ -75,8 +75,15 @@ class _TopTabsState extends State<TopTabs> {
                   ),
                   Container(
                     width: double.infinity,
-                    child: Image.asset('assets/Frame 2.png',
-                        width: double.infinity),
+                    child: Center(
+                      child: Text('Welcome to live scores',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold
+                      ),
+                      ),
+                    ),
                   ),
                 ],
               ),
